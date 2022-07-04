@@ -5,7 +5,7 @@
     <% if user_signed_in? %>
       <div class="greeting">
         <%= "こんにちは、" %>
-        <%= link_to current_user.name + "さん", "/users/#{current_user.id}", class: :greeting__link%>
+        <%= link_to current_user.name + "さん", user_path(current_user.id), class: :greeting__link%>
       </div>
     <% end %>
     <%# // ログインしているときは上記を表示する %>
@@ -14,12 +14,12 @@
 <%= month_calendar events: @events do |date, events| %>
   <%= date.day %>
 
-  <% events.each do |event| %>
-    <div class = "pain">
-      <%= link_to event.pain.name, event_path(event), class: "btn btn-success" %>
-    </div>
-  <% end %>
+    <% events.each do |event| %>
+      <div class = "pain">
+        <%= link_to event.pain.name, user_event_path(event.id), class: "btn btn-success" %>
+      </div>
+    <% end %>
 <% end %>
 <div class = "new-button">
-<%= link_to '経過観察', new_event_path %>
+<%= link_to '経過観察', new_user_event_path %>
 </div>
