@@ -1,36 +1,40 @@
 class EventsController < ApplicationController
+  before_action :set_event, only: [:edit, :update, :destroy]
+  before_action :authenticate_user!
+
   def index
-    @events = Event.all
+    @events = current_user.events
   end
 
   def new
-    @event = Event.new
+    @event = current_user.events.new
   end
 
   def create
-    Event.create(event_params)
-    redirect_to root_path
+    @event = current_user.events.new(event_params)
+    if @event.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   def show
-    @event = Event.find(params[:id])
+    @event = current_user.events.find(params[:id])
   end
   
   def edit
-    @event = Event.find(params[:id])
   end
   
   def update
-    @event = Event.find(params[:id])
     if @event.update(event_params)
       redirect_to root_path, notice: "編集しました"
     else
-      render 'edit'
+      render :edit
     end
   end
 
   def destroy
-    @event = Event.find(params[:id])
     @event.destroy
     redirect_to root_path, notice:"削除しました"
   end
@@ -38,6 +42,11 @@ class EventsController < ApplicationController
   private
 
   def event_params
-    params.require(:event).permit(:start_time, :pain_id, :stretch_id, :training_id, :posture_id, :meal_id, :motion_id, :smoking_id, :postscript)
+    params.require(:event).permit(:start_time, :pain_id, :stretch_id, :training_id, :posture_id, :meal_id, :motion_id, :smoking_id, :postscript).merge(user_id: current_user.id)
   end
+
+  def set_event
+    @event = current_user.events.find(params[:id])
+  end
+
 end
