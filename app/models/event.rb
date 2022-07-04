@@ -9,4 +9,6 @@ class Event < ApplicationRecord
   belongs_to :smoking
 
   validates :pain_id, numericality: { other_than: 0, message: "can't be blank" }
+
+  belongs_to :user
 end
