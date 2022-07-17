@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<% if current_user.admin? %>
+  <%= link_to "ユーザーリスト", admin_users_path %><br>
+<% end %>
+
+<div class="greeting">
+  <%= "こんにちは、" %>
+  <%= link_to current_user.name + "さん", user_path(current_user.id), class: :greeting__link%>
+</div>
+
+<% if current_user.admin? %>
+  <%= "このページは" %>
+  <%= link_to @user.name, admin_user_path(@user.id) %>
+  <%= "さんのページです。" %>
+<% end %>
+
+<%# 管理者用表示 %>
+<% if current_user.admin? %>
+  <%= month_calendar events: @user.events do |date, events| %>
+    <%= date.day %>
+
+      <% events.each do |event| %>
+        <div class = "pain">
+          <%= link_to event.pain.name, event_admin_user_path(event.id), class: "btn btn-success" %>
+        </div>
+      <% end %>
+
+  <% end %>
+<%# // 管理者用表示 %>
+<%# 一般ユーザー用表示 %>
+<% else %>
+  <%= month_calendar events: @events do |date, events| %>
+    <%= date.day %>
+
+      <% events.each do |event| %>
+        <div class = "pain">
+          <%= link_to event.pain.name, event_path(event.id), class: "btn btn-success" %>
+        </div>
+      <% end %>
+
+  <% end %>
+<% end %>
+<%# // 一般ユーザー用表示 %>
+<% unless current_user.admin? %>
+<div class = "new-button">
+<%= link_to '経過観察', new_event_path %>
+</div>
+<% end %>
