@@ -6,6 +6,7 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
@@ -14,7 +15,7 @@
       <div class="inner">
         <div class="nav">
           <div class="nav__left">
-            <%# <%= link_to image_tag("logo.png", class: :logo), root_path %>
+             <%= link_to image_tag("logo.png", class: :logo), root_path %>
           </div>
           <%# 一般ユーザー用 %>
           <% if user_signed_in? %>
@@ -36,7 +37,7 @@
     </header>
     <%= yield %>
     <footer class="footer">
-      <p class="copyright">Copyright © Hernia app All rights reserved.</p>
+      <p class="copyright">Copyright © Heal-nia All rights reserved.</p>
     </footer>
   </body>
 </html>
