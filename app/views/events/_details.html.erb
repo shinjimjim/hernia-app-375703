@@ -2,82 +2,102 @@
 
 <p>
   <strong>登録日</strong>
-  <%= @event.start_time.strftime("%Y-%m-%d %H:%M") %>
+  <%= @event.start_time.strftime("%Y年%m月%d日") %>
 </p>
 
-<p>
-  <strong>今日の痛みは0(全く痛くない)〜10(今までに経験した中で最も痛い)の11段階で表すとどのくらいですか？</strong>
-  <%= @event.pain.name %>
-</p>
+<table class="table table-striped">
+  <tr>
+    <th scope="row">今日の痛みは0(全く痛くない)〜10(今までに経験した中で最も痛い)の11段階で表すとどのくらいですか？</th>
+    <td >
+      <h1 class="font-weight-bold"><%= @event.pain.name %></h1>
+    </td>
+  </tr>
 
-<p>
-  <strong>ストレッチをしましたか？</strong>
-    <% if @event.stretch.present? %>
-      <%= @event.stretch.name %>
-    <% else %>
-      <%= "未選択" %>
-    <% end %>
-</p>
+  <tr>
+    <th scope="row">ストレッチをしましたか？</th>
+    <td>
+      <% if @event.stretch_id == 0 %>
+        <%= "未選択" %>
+      <% else %>
+        <%= @event.stretch.name %>
+      <% end %>
+    </td>
+  </tr>
 
-<p>
-  <strong>筋力トレーニングをしましたか？</strong>
-    <% if @event.training.present? %>
-      <%= @event.training.name %>
-    <% else %>
-      <%= "未選択" %>
-    <% end %>
-</p>
+  <tr>
+    <th scope="row">筋力トレーニングをしましたか？</th>
+    <td>
+      <% if @event.training_id == 0 %>
+        <%= "未選択" %>
+      <% else %>
+        <%= @event.training.name %>
+      <% end %>
+    </td>
+  </tr>
 
-<p>
-  <strong>負担をかけない姿勢で生活できましたか？</strong>
-    <% if @event.posture.present? %>
-      <%= @event.posture.name %>
-    <% else %>
-      <%= "未選択" %>
-    <% end %>
-</p>
+  <tr>
+    <th scope="row">負担をかけない姿勢で生活できましたか？</th>
+    <td>
+      <% if @event.posture_id == 0 %>
+        <%= "未選択" %>
+      <% else %>
+        <%= @event.posture.name %>
+      <% end %>
+    </td>
+  </tr>
 
-<p>
-  <strong>バランスの良い食事を摂れましたか？</strong>
-    <% if @event.meal.present? %>
-      <%= @event.meal.name %>
-    <% else %>
-      <%= "未選択" %>
-    <% end %>
-</p>
+  <tr>
+    <th scope="row">バランスの良い食事を摂れましたか？</th>
+    <td>
+      <% if @event.meal_id == 0 %>
+        <%= "未選択" %>
+      <% else %>
+        <%= @event.meal.name %>
+      <% end %>
+    </td>
+  </tr>
 
-<p>
-  <strong>負担のかかる激しい運動をしませんでした？</strong>
-    <% if @event.motion.present? %>
-      <%= @event.motion.name %>
-    <% else %>
-      <%= "未選択" %>
-    <% end %>
-</p>
+  <tr>
+    <th scope="row">負担のかかる激しい運動をしませんでした？</th>
+    <td>
+      <% if @event.motion_id == 0 %>
+        <%= "未選択" %>
+      <% else %>
+        <%= @event.motion.name %>
+      <% end %>
+    </td>
+  </tr>
 
-<p>
-  <strong>どのくらいタバコを吸いましたか？</strong>
-    <% if @event.smoking.present? %>
-      <%= @event.smoking.name %>
-    <% else %>
-      <%= "未選択" %>
-    <% end %>
-</p>
+  <tr>
+    <th scope="row">どのくらいタバコを吸いましたか？</th>
+    <td>
+      <% if @event.smoking_id == 0 %>
+        <%= "未選択" %>
+      <% else %>
+        <%= @event.smoking.name %>
+      <% end %>
+    </td>
+  </tr>
 
-<p>
-  <strong>追記</strong>
-    <% if @event.postscript.present? %>
-      <%= @event.postscript %>
-    <% else %>
-      <%= "未選択" %>
-    <% end %>
-</p>
+  <tr>
+    <th scope="row">追記</th>
+    <td>
+      <% if @event.postscript.present? %>
+        <%= @event.postscript %>
+      <% else %>
+        <%= "なし" %>
+      <% end %>
+    </td>
+  </tr>
+</table>
 
-
+<div class="btn-group" role="group" aria-label="Basic example">
 <% if current_user.admin? %>
-<%= link_to '戻る', events_admin_user_path(@user.id) %>
+<%= link_to '戻る', events_admin_user_path(@user.id), class:"btn btn-secondary" %>
 <% else %>
-<%= link_to '編集', edit_event_path(@event) %> |
-<%= link_to '戻る', root_path %> |
-<%= link_to '削除', event_path(@event), method: :delete %>
+<%= link_to '編集', edit_event_path(@event), class:"btn btn-secondary" %>
+<%= link_to '戻る', root_path, class:"btn btn-secondary" %>
+<%= link_to '削除', event_path(@event), method: :delete, class:"btn btn-secondary" %>
 <% end %>
+</div>
+
