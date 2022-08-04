@@ -44,6 +44,6 @@
 <%# // 一般ユーザー用表示 %>
 <% unless current_user.admin? %>
 <div class = "new-button">
-<%= link_to '経過観察', new_event_path %>
+<%= link_to '経過観察', new_event_path, class: "btn btn-primary btn-lg" %>
 </div>
 <% end %>
