@@ -1,6 +1,6 @@
 class Admin::UsersController < ApplicationController
   before_action :if_not_admin
-  before_action :set_events, only: [:index, :show, :events, :event]
+  before_action :set_events, only: [:index, :show, :events]
   before_action :set_user, only: [:show, :events]
     
   def index
@@ -13,10 +13,6 @@ class Admin::UsersController < ApplicationController
   def events
   end
 
-  def event
-    @user = User.find_by(params[:id])
-    @event = @user.events.find(params[:id])
-  end
 
   private
 
