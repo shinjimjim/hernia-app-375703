@@ -13,8 +13,8 @@ Rails.application.routes.draw do
     resources :users do
       member do
         get :events
-        get :event
       end
+      resources :events, only: :show
     end
   end
 end
