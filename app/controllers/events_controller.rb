@@ -14,16 +14,18 @@ class EventsController < ApplicationController
   def create
     @event = current_user.events.new(event_params)
     if @event.save
-      redirect_to root_path
+      redirect_to root_path, notice: "登録しました"
     else
       render :new
     end
   end
 
   def show
+    redirect_to action: :index unless current_user.id == @event.user_id
   end
   
   def edit
+    redirect_to action: :index unless current_user.id == @event.user_id
   end
   
   def update
@@ -35,9 +37,12 @@ class EventsController < ApplicationController
   end
 
   def destroy
-    @event.destroy
+    if current_user.id == @event.user_id
+      @event.destroy
+    end
     redirect_to root_path, notice:"削除しました"
   end
+
 
   private
 
@@ -46,7 +51,7 @@ class EventsController < ApplicationController
   end
 
   def set_event
-    @event = current_user.events.find(params[:id])
+    @event = Event.find(params[:id])
   end
 
 end
