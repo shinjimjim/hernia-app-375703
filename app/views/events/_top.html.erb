@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <% if current_user.admin? %>
-  <%= link_to "ユーザーリスト", admin_users_path %><br>
+  <%= link_to "ユーザーリスト", admin_users_path, class: "btn btn-info btn-block" %><br>
 <% end %>
 
 <div class="greeting">
@@ -44,6 +44,6 @@
 <%# // 一般ユーザー用表示 %>
 <% unless current_user.admin? %>
 <div class = "new-button">
-<%= link_to '経過観察', new_event_path, class: "btn btn-primary btn-lg" %>
+<%= link_to '経過観察', new_event_path, class: "btn btn-primary btn-lg btn-block" %>
 </div>
 <% end %>

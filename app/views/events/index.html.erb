@@ -1,7 +1,9 @@
 <% if current_user.admin? %>
-  <% @users.each do |user| %>
-    <%= link_to user.name, events_admin_user_path(user) %>
-  <% end %>
+  <div class="btn-group-vertical">
+    <% User.where.not(id: current_user.id).each do |user| %>
+      <%= link_to user.name, events_admin_user_path(user), class: "btn btn-outline-dark" %>
+    <% end %>
+  </div>
 <% else %>
   <div>
     <%= render partial: "top", locals: { event: @event } %>
