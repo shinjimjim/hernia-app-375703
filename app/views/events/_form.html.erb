@@ -2,6 +2,8 @@
 
 <%= form_with(model: @event, local: true) do |form| %>
 
+  <%= render 'layouts/error_messages', model: form.object %>
+
   <div class="form-group">
     <%= form.label :登録日 %><br>
     <%= form.date_select :start_time %>
