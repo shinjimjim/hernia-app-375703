@@ -71,3 +71,14 @@ a {
   display: flex;
   justify-content: center;
 }
+
+/* エラーメッセージ */
+.error-alert {
+  color:#262626; 
+  background:#FFEBE8;
+  display: flex;
+  align-items: center;
+  /* text-align: center; */
+  border:2px solid #990000;
+  padding:16px 20px 0px; font-weight:850;
+}
