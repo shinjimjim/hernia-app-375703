@@ -80,5 +80,5 @@ a {
   align-items: center;
   /* text-align: center; */
   border:2px solid #990000;
-  padding:16px 20px 0px; font-weight:850;
+  padding:16px 20px 16px; font-weight:850;
 }
