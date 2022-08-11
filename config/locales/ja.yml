@@ -10,6 +10,9 @@ ja:
         end_time: 終了時刻
         created_at: 登録日
         updated_at: 更新日
+        pain_id: 痛み指数
+      user:
+        name: ユーザー名
 
   date:
     formats:

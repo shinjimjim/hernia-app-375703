@@ -8,7 +8,7 @@ class Event < ApplicationRecord
   belongs_to :motion
   belongs_to :smoking
 
-  validates :pain_id, numericality: { other_than: 0, message: "can't be blank" }
+  validates :pain_id, numericality: { other_than: 0, message: "が選択されていません。" }
 
   belongs_to :user
 end
