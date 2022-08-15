@@ -4,6 +4,9 @@
       <%= link_to user.name, events_admin_user_path(user), class: "btn btn-outline-dark" %>
     <% end %>
   </div>
+  <div>
+    <%= link_to "ルーム作成", new_room_path %>
+  </div>
 <% else %>
   <div>
     <%= render partial: "top", locals: { event: @event } %>
