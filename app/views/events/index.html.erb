@@ -5,7 +5,10 @@
     <% end %>
   </div>
   <div>
-    <%= link_to "ルーム作成", new_room_path %>
+    <a href="/rooms/new" class="btn btn--circle"><i class="far fa-envelope"></i><br>ルーム作成<br><i class="fas fa-angle-down fa-position-bottom"></i></a>
+  </div>
+  <div>
+    <a href="/rooms" class="btn btn--circle1"><i class="far fa-envelope"></i><br>ルーム選択<br><i class="fas fa-angle-down fa-position-bottom"></i></a>
   </div>
 <% else %>
   <div>
