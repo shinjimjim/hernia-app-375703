@@ -4,11 +4,19 @@
       <%= @room.name %>
     </div>
   </div>
-  <div class="right-header">
-    <div class="header-button">
-      <%= link_to "チャットを終了する", "/rooms/#{@room.id}", method: :delete %>
+  <% if current_user.admin? %>
+    <div class="right-header">
+      <div class="header-button">
+        <%= link_to "チャットを削除する", "/rooms/#{@room.id}", method: :delete %>
+      </div>
     </div>
-  </div>
+  <% else %>
+    <div class="right-header">
+      <div class="header-button">
+        <%= link_to "トップに戻る", root_path %>
+      </div>
+    </div>
+  <% end %>
 </div>
 
 <div class="messages">
