@@ -15,9 +15,9 @@
  */
  
  /* 要素サイズの調整 */
- * {
+ /* * {
   box-sizing: border-box;
-}
+} */
 
 /* リセットCSS */
 /* * {
@@ -88,7 +88,7 @@ a {
   padding:16px 20px 16px; font-weight:850;
 }
 
-@import "https://use.fontawesome.com/releases/v5.13.0/css/all.css";
+/* @import "https://use.fontawesome.com/releases/v5.13.0/css/all.css"; */
 
 *,
 *:before,
