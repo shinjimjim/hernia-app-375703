@@ -44,7 +44,7 @@
           <% if event.pain.name.to_i >= 7 && event.pain.name.to_i <= 10 %>
             <%= link_to event.pain.name, event_path(event.id), class: "btn btn-danger" %>
           <% elsif event.pain.name.to_i >= 3 && event.pain.name.to_i <= 6 %>
-            <%= link_to event.pain.name, event_path(event.id), class: "btn btn-warning" %>
+            <%= link_to event.pain.name, event_path(event.id), class: "btn btn-warning text-white" %>
           <% elsif event.pain.name.to_i >= 1 && event.pain.name.to_i <= 2 %>
             <%= link_to event.pain.name, event_path(event.id), class: "btn btn-success" %>
           <% end %>

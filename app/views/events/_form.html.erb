@@ -11,8 +11,7 @@
   
   <div class="form-group">
     <%= form.label :"今日の痛みは0(全く痛くない)〜10(今までに経験した中で最も痛い)の11段階で表すとどのくらいですか？" %><br>
-    <%= form.collection_select(:pain_id, Pain.all, :id, :name, {}, {class:"pain-select form-control-lg", id:"pain"}) %>
-    <%= "（必須）" %>
+    <h2><%= form.collection_select(:pain_id, Pain.all, :id, :name, {}, {class:"pain-select form-control-lg", id:"pain"}) %><span class="badge badge-secondary">必須</span></h2>
   </div>
 
   <div class="form-group">
