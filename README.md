@@ -78,7 +78,7 @@ https://hernia-app-375703.herokuapp.com/
 ### ログイン機能
 ログインすることで一覧ページに遷移できます。
 
-![Image from Gyazo](https://i.gyazo.com/79ad333bbd5d1f11ac96d0c47a06e3fe.gif)
+[![Image from Gyazo](https://i.gyazo.com/0735fca1573f83045576d22041ad8c41.gif)](https://gyazo.com/0735fca1573f83045576d22041ad8c41)
 
 <br>
 
@@ -86,25 +86,25 @@ https://hernia-app-375703.herokuapp.com/
 項目を選択し登録ボタンを押すと情報が反映された一覧ページに遷移します。
 (必須項目は一番上の痛み指数のみです)
 
-[![Image from Gyazo](https://i.gyazo.com/8b02fb97e7f4382aef7803e7c878e0a0.gif)](https://gyazo.com/8b02fb97e7f4382aef7803e7c878e0a0)
+[![Image from Gyazo](https://i.gyazo.com/b82a0a71de85de0d1eef5630eade46d1.gif)](https://gyazo.com/b82a0a71de85de0d1eef5630eade46d1)
 
 <br>
 
-[![Image from Gyazo](https://i.gyazo.com/e30ac5c81002757b6318c1a21451da21.gif)](https://gyazo.com/e30ac5c81002757b6318c1a21451da21)
+[![Image from Gyazo](https://i.gyazo.com/3df2c97c058cab01d88a0473f0767e8c.gif)](https://gyazo.com/3df2c97c058cab01d88a0473f0767e8c)
 
 <br>
 
 ### 詳細・編集・削除機能
 記録した情報の詳細、編集、削除が可能です。
 
-[![Image from Gyazo](https://i.gyazo.com/03426a602603f0c26bece9c0c74b99f9.gif)](https://gyazo.com/03426a602603f0c26bece9c0c74b99f9)
+[![Image from Gyazo](https://i.gyazo.com/fa249b665b9c4d530aad267275e1fa31.gif)](https://gyazo.com/fa249b665b9c4d530aad267275e1fa31)
 
 <br>
 
 ### チャット機能
 管理者ユーザーとチャットができます。
 
-
+[![Image from Gyazo](https://i.gyazo.com/5dbaa0fccc3116c047d1d48285d2f60f.gif)](https://gyazo.com/5dbaa0fccc3116c047d1d48285d2f60f)
 
 <br>
 
@@ -113,35 +113,35 @@ https://hernia-app-375703.herokuapp.com/
 ### ログイン機能
 ログインすることでユーザー選択ページに遷移できます。
 
-[![Image from Gyazo](https://i.gyazo.com/09e7921ef36a85a9ba8a797543da2e95.gif)](https://gyazo.com/09e7921ef36a85a9ba8a797543da2e95)
+[![Image from Gyazo](https://i.gyazo.com/f543e983817694a5df78bf3ff952d2fb.gif)](https://gyazo.com/f543e983817694a5df78bf3ff952d2fb)
 
 <br>
 
 ### ユーザー選択機能
 ユーザーを選択するとそのユーザーの記録した一覧ページへ遷移します。
 
-[![Image from Gyazo](https://i.gyazo.com/4d630404ee8235dd99896f24b0988507.gif)](https://gyazo.com/4d630404ee8235dd99896f24b0988507)
+[![Image from Gyazo](https://i.gyazo.com/40cf85e441c21a7d35cdf6f5ada12353.gif)](https://gyazo.com/40cf85e441c21a7d35cdf6f5ada12353)
 
 <br>
 
 ### 新規登録機能
 ヘッダーの新規登録からユーザー新規登録ページへ遷移します。
 
-[![Image from Gyazo](https://i.gyazo.com/cae428314a1952995f0cf199a0a290d4.gif)](https://gyazo.com/cae428314a1952995f0cf199a0a290d4)
+[![Image from Gyazo](https://i.gyazo.com/646771f58a5aef34a9e92a807d515ec2.gif)](https://gyazo.com/646771f58a5aef34a9e92a807d515ec2)
 
 <br>
 
 ### チャット機能(ルーム作成)
 ルーム名を入力し対象のユーザーを選択するとそのユーザーとのチャットルームが作成されます。
 
-
+[![Image from Gyazo](https://i.gyazo.com/ffc91ca1dd28036af6dcc739b6e156a3.gif)](https://gyazo.com/ffc91ca1dd28036af6dcc739b6e156a3)
 
 <br>
 
 ### チャット機能
 登録したユーザー名を選択することでそのユーザーとチャットができます。
 
-
+[![Image from Gyazo](https://i.gyazo.com/1cdba428c1a73663cb1b51e8b9a331b6.gif)](https://gyazo.com/1cdba428c1a73663cb1b51e8b9a331b6)
 
 
 <br>
@@ -154,12 +154,12 @@ https://hernia-app-375703.herokuapp.com/
 <br>
 
 # データベース設計
-![ER図](https://user-images.githubusercontent.com/101030605/181933442-eea581b3-70a4-4245-bd0d-f2f1f3de1c67.png)
+![ER図](https://user-images.githubusercontent.com/101030605/185245749-5cd9a3b1-21d4-4954-8efc-be0c78ecac92.png)
 <br>
 <br>
 
 # 画面遷移図
-![画面遷移図](https://user-images.githubusercontent.com/101030605/181933645-aaaab977-b7b9-444e-870f-4be68a00e7f3.png)
+![画面遷移図](https://user-images.githubusercontent.com/101030605/185245446-aa180510-667b-4764-9807-959419aa7107.png)
 <br>
 <br>
 
